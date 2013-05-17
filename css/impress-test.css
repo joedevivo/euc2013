@@ -115,3 +115,8 @@ div.code.past {
 
 div.last.past {
   opacity: 1; }
+
+div.notes {
+  display: none;
+  height: 0px;
+  width: 0px; }
