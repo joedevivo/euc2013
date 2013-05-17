@@ -74,7 +74,7 @@
         </ul>
     </div>
 
-    <div id="code1-0" class="step slide" style="font-size:26px" data-x="0" data-y="-1500">
+    <div id="code1-0" class="step slide code1" data-x="0" data-y="-1500">
         <div class="highlight">
 <pre><span class="nf">init</span><span class="p">([])</span> <span class="o">-&gt;</span>
     <span class="k">case</span> <span class="nn">application</span><span class="p">:</span><span class="nf">get_env</span><span class="p">(</span><span class="n">riak_jmx</span><span class="p">,</span> <span class="n">enabled</span><span class="p">)</span> <span class="k">of</span>
@@ -91,7 +91,7 @@
     </div>
     </div>
 
-    <div id="code1-1" class="step slide invisible" style="font-size:26px" data-x="0" data-y="-1500">
+    <div id="code1-1" class="step slide invisible code1" data-x="0" data-y="-1500">
         <div class="highlight">
 <pre>init([]) -&gt;
     case application:get_env(riak_jmx, enabled) of
@@ -108,10 +108,31 @@
     </div>
     </div>
 
+    <div id="code1-2" class="step slide invisible code1" data-x="0" data-y="-1500">
+        <div class="highlight">
+<pre>init([]) -&gt;
+    case application:get_env(riak_jmx, enabled) of
+        {ok, true} ->
+            %% Trap exits so that we get a chance 
+            %% to stop the JMX process
+            process_flag(trap_exit, true),
+            Port = jmx(),
+            {ok, #state{ retry = 0, port = Port }};
+        <span class="grow"><span class="p">_</span> <span class="o">-&gt;</span>
+            <span class="n">ignore</span></span>
+    end.
+</pre>
+    </div>
+    </div>
+
     <div class="step slide" data-x="1500" data-y="-1500">
         <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
     </div>
 </div>
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script src="js/impressConsole.js"></script>
+<script>
+impress().init();
+impressConsole().init();
+</script>
 </body>
