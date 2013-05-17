@@ -7,6 +7,29 @@
     background:      -o-radial-gradient(rgb($fromR, $fromG, $fromB), rgb($toR, $toG, $toB));
     background:         radial-gradient(rgb($fromR, $fromG, $fromB), rgb($toR, $toG, $toB));
 }
+
+@mixin vendor($property, $value) {
+  -webkit-#{$property} : $value;
+  -moz-#{$property}    : $value;
+  -ms-#{$property}     : $value;
+  -o-#{$property}      : $value;
+  #{$property}         : $value;
+}
+
+@mixin transition($properties) {
+  @include vendor('transition', $properties);
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin transform($properties) {
+  @include vendor('transform', $properties);
+}
+
+@mixin animation($properties) {
+  @include vendor('animation', $properties);
+  @include vendor('animation-fill-mode', forwards);
+}
+
 body {
     font-family: 'PT Sans', sans-serif;
     color: rgb(200,200,200);
@@ -46,11 +69,8 @@ i, em { font-style: italic }
     padding: 40px;
     margin: 20px auto;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    -ms-box-sizing:     border-box;
-    -o-box-sizing:      border-box;
-    box-sizing:         border-box;
+    @include vendor('box-sizing', border-box);
+    @include transition(opacity .3s ease);
 
     font-family: 'PT Serif', georgia, serif;
     font-size: 48px;
@@ -60,22 +80,27 @@ i, em { font-style: italic }
 #title h1 {
     font-size: 100px;
     color: rgb(230,131,49);
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
+    @include transform(translate(50px));
 }
 
-.invisible{opacity:0.0}
-.active.invisible{opacity:1.0}
+.invisible {
+    opacity:0.0;
+    @include transition(opacity .3s ease);
+}
 
-#code1-0.past { display:none; }
+.active.invisible{
+    opacity:1.0;
+    @include transition(opacity .3s ease);
+}
+
+#code1-0.past { opacity: 0 }
+
+@-webkit-keyframes resizify {
+    0%   { @include transform(scale(1.0)) }
+    100% { @include transform(scale(1.3)) }
+}
+
 #code1-1.present .grow {
     display: inline-block;
-    -webkit-transform: scale(1.3);
-    -moz-transform:    scale(1.3);
-    -ms-transform:     scale(1.3);
-    -o-transform:      scale(1.3);
-    transform:         scale(1.3);
+    @include animation(resizify .3s ease)
 }
