@@ -93,14 +93,12 @@ i, em { font-style: italic }
     @include transition(opacity .3s ease);
 }
 
-/*#code1-0.past { opacity: 0 }*/
-.code1 .past { opacity: 0 }
 @-webkit-keyframes resizify {
     0%   { @include transform(scale(1.0)) }
     100% { @include transform(scale(1.3)) }
 }
 
-#div.code1 {
+div.code1 {
     font-size:26px;
 }
 
@@ -108,3 +106,6 @@ i, em { font-style: italic }
     display: inline-block;
     @include animation(resizify .3s ease)
 }
+
+div.code.past { opacity: 0 }
+div.last.past { opacity: 1.0 }

@@ -1,5 +1,5 @@
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   color: #c8c8c8;
   min-height: 740px;
   background: #282828;
@@ -22,7 +22,7 @@ i, em {
   width: 780px;
   padding: 10px 10px 0;
   margin: 20px auto;
-  border: 1px solid #e4c652;
+  border: 1px solid #E4C652;
   border-radius: 10px;
   background: #EEDC94; }
 
@@ -48,7 +48,7 @@ i, em {
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   -webkit-backface-visibility: hidden;
-  font-family: "PT Serif", georgia, serif;
+  font-family: 'PT Serif', georgia, serif;
   font-size: 48px;
   line-height: 1.5; }
 
@@ -79,9 +79,6 @@ i, em {
   transition: opacity 0.3s ease;
   -webkit-backface-visibility: hidden; }
 
-#code1-0.past {
-  opacity: 0; }
-
 @-webkit-keyframes resizify {
   0% {
     -webkit-transform: scale(1);
@@ -97,7 +94,10 @@ i, em {
     -o-transform: scale(1.3);
     transform: scale(1.3); } }
 
-#code1-1.present .grow {
+div.code1 {
+  font-size: 26px; }
+
+.grow {
   display: inline-block;
   -webkit-animation: resizify 0.3s ease;
   -moz-animation: resizify 0.3s ease;
@@ -109,3 +109,9 @@ i, em {
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
+
+div.code.past {
+  opacity: 0; }
+
+div.last.past {
+  opacity: 1; }
