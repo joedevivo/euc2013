@@ -1,0 +1,11 @@
+================ jmx_verify failure stack trace =====================
+{{assertNotEqual_failed,[{module,jmx_verify},
+                         {line,113},
+                         {expression,"{ Key , 0 }"},
+                         {value,{<<"cpu_nprocs">>,0}}]},
+ [{jmx_verify,'-verify_nz/2-fun-0-',2,
+              [{file,"tests/jmx_verify.erl"},{line,113}]},
+  {jmx_verify,'-verify_nz/2-lc$^0/1-0-',2,
+              [{file,"tests/jmx_verify.erl"},{line,113}]},
+  {jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,42}]}]}
+=====================================================================

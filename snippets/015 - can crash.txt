@@ -1,0 +1,12 @@
+11:46:54.094 [error] 
+================ jmx_verify failure stack trace =====================
+{{assertEqual_failed,[{module,jmx_verify},
+                      {line,176},
+                      {expression,"true"},
+                      {expected,"riak_jmx crash able to crash riak node"},
+                      {value,true}]},
+ [{jmx_verify,'-test_supervision/0-fun-0-',1,
+              [{file,"tests/jmx_verify.erl"},{line,176}]},
+  {jmx_verify,test_supervision,0,[{file,"tests/jmx_verify.erl"},{line,176}]},
+  {jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,29}]}]}
+=====================================================================

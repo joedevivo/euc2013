@@ -1,0 +1,51 @@
+14:26:12.574 [info] Resetting nodes to fresh state
+14:26:12.574 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" reset HEAD --hard
+14:26:13.073 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" clean -fd
+14:26:13.363 [info] Cleaning up lingering pipe directories
+14:26:13.364 [warning] rt:set_backend doesn't recognize undefined as a legit backend, using the default.
+14:26:13.460 [info] Checking for presence of java
+14:26:13.469 [info] jmx_verify prereqs: [{"java",true}]
+14:26:13.469 [notice] Running Test jmx_verify
+14:26:14.479 [info] Test Runner `uname -a` : Darwin Black13.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64
+
+14:26:14.479 [info] Riak path: "/Users/joe/riak_test_ee"
+14:26:14.496 [info] rtdev:update_app_config_file(/Users/joe/riak_test_ee/current/dev/dev1/etc/app.config, [{riak_jmx,[{enabled,true},{port,80}]}])
+14:26:14.509 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak start
+14:26:20.671 [debug] Supervisor inet_gethost_native_sup started undefined at pid <0.112.0>
+14:26:20.671 [debug] Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.111.0>
+14:26:20.757 [info] Wait until 'dev1@127.0.0.1' is pingable
+14:26:20.763 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/hashtree_intercepts.erl on node dev1@127.0.0.1
+14:26:20.787 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/intercept.erl on node dev1@127.0.0.1
+14:26:20.880 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_ring_manager_intercepts.erl on node dev1@127.0.0.1
+14:26:20.892 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_vnode_proxy_sup_intercepts.erl on node dev1@127.0.0.1
+14:26:20.907 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_get_fsm_intercepts.erl on node dev1@127.0.0.1
+14:26:20.919 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_put_fsm_intercepts.erl on node dev1@127.0.0.1
+14:26:20.931 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_vnode_intercepts.erl on node dev1@127.0.0.1
+14:26:20.978 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_pipe_vnode_intercepts.erl on node dev1@127.0.0.1
+14:26:20.991 [info] Wait until 'dev1@127.0.0.1' is pingable
+14:26:20.992 [info] Check 'dev1@127.0.0.1' is a singleton
+14:26:21.032 [info] Deployed nodes: ['dev1@127.0.0.1']
+14:26:21.033 [info] Waiting for services [riak_kv] to start on ['dev1@127.0.0.1'].
+14:26:41.035 [info] calling riak_jmx:stop() to reset retry counters
+14:26:41.043 [info] loading lager backend on node
+14:26:41.048 [info] Now we're capturing logs on the node, let's start jmx
+14:26:41.048 [info] calling riak_jmx:start() to get these retries started
+14:27:21.057 [info] It can fail, it can fail 10 times
+14:27:21.058 [warning] jmx_verify failed: {{assertEqual_failed,[{module,jmx_verify},{line,205},{expression,"{ retry_count , RetryCount }"},{expected,{retry_count,10}},{value,{retry_count,0}}]},[{jmx_verify,'-test_supervision/0-fun-2-',2,[{file,"tests/jmx_verify.erl"},{line,205}]},{jmx_verify,test_supervision,0,[{file,"tests/jmx_verify.erl"},{line,205}]},{jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,29}]}]}
+14:27:21.058 [error] Error in process <0.105.0> on node 'riak_test@127.0.0.1' with exit value: {{assertEqual_failed,[{module,jmx_verify},{line,205},{expression,"{ retry_count , RetryCount }"},{expected,{retry_count,10}},{value,{retry_count,0}}]},[{jmx_verify,'-test_supervision/0-fun-2-',2,[{file,"tests/jmx_verify.... 
+
+
+14:27:21.059 [error] 
+================ jmx_verify failure stack trace =====================
+{{assertEqual_failed,[{module,jmx_verify},
+                      {line,205},
+                      {expression,"{ retry_count , RetryCount }"},
+                      {expected,{retry_count,10}},
+                      {value,{retry_count,0}}]},
+ [{jmx_verify,'-test_supervision/0-fun-2-',2,
+              [{file,"tests/jmx_verify.erl"},{line,205}]},
+  {jmx_verify,test_supervision,0,[{file,"tests/jmx_verify.erl"},{line,205}]},
+  {jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,29}]}]}
+=====================================================================
+
+14:27:21.059 [notice] jmx_verify Test Run Complete

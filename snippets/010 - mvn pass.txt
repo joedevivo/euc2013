@@ -1,0 +1,69 @@
+10:47:19.865 [info] Resetting nodes to fresh state
+10:47:19.865 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" reset HEAD --hard
+10:47:22.524 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" clean -fd
+10:47:23.704 [info] Cleaning up lingering pipe directories
+10:47:23.706 [warning] rt:set_backend doesn't recognize undefined as a legit backend, using the default.
+10:47:23.772 [info] Checking for presence of java
+10:47:23.786 [info] jmx_verify prereqs: [{"java",true}]
+10:47:23.786 [notice] Running Test jmx_verify
+10:47:24.795 [info] Test Runner `uname -a` : Darwin Black13.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64
+
+10:47:24.795 [info] Riak path: "/Users/joe/riak_test_ee"
+10:47:24.811 [info] rtdev:update_app_config_file(/Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev1/etc/app.config, [{riak_jmx,[{enabled,true},{port,41111}]}])
+10:47:24.824 [info] Running: /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev1/bin/riak start
+10:47:30.823 [debug] Supervisor inet_gethost_native_sup started undefined at pid <0.98.0>
+10:47:30.824 [debug] Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.97.0>
+10:47:30.866 [info] Wait until 'dev1@127.0.0.1' is pingable
+10:47:30.875 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/hashtree_intercepts.erl on node dev1@127.0.0.1
+10:47:30.906 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/intercept.erl on node dev1@127.0.0.1
+10:47:30.986 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_ring_manager_intercepts.erl on node dev1@127.0.0.1
+10:47:30.997 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_vnode_proxy_sup_intercepts.erl on node dev1@127.0.0.1
+10:47:31.006 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_get_fsm_intercepts.erl on node dev1@127.0.0.1
+10:47:31.018 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_put_fsm_intercepts.erl on node dev1@127.0.0.1
+10:47:31.029 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_vnode_intercepts.erl on node dev1@127.0.0.1
+10:47:31.070 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_pipe_vnode_intercepts.erl on node dev1@127.0.0.1
+10:47:31.088 [info] Wait until 'dev1@127.0.0.1' is pingable
+10:47:31.089 [info] Check 'dev1@127.0.0.1' is a singleton
+10:47:31.129 [info] Deployed nodes: ['dev1@127.0.0.1']
+10:47:31.129 [info] Waiting for services [riak_kv] to start on ['dev1@127.0.0.1'].
+10:47:31.131 [info] Wait until nodes are ready : ['dev1@127.0.0.1']
+10:48:11.749 [info] perform 5 x  PUT and a GET to increment the stats
+10:48:11.749 [info] as the stat system only does calcs for > 5 readings
+10:48:52.398 [info] node_gets: 0 -> 10 (expected 10)
+10:48:52.398 [info] node_puts: 0 -> 5 (expected 5)
+10:48:52.399 [info] node_gets_total: 0 -> 10 (expected 10)
+10:48:52.399 [info] node_puts_total: 0 -> 5 (expected 5)
+10:48:52.399 [info] vnode_gets: 0 -> 30 (expected 30)
+10:48:52.399 [info] vnode_puts: 0 -> 15 (expected 15)
+10:48:52.399 [info] vnode_gets_total: 0 -> 30 (expected 30)
+10:48:52.400 [info] vnode_puts_total: 0 -> 15 (expected 15)
+10:48:52.400 [info] Make PBC Connection
+10:49:32.908 [info] pbc_connects_total: 0 -> 1 (expected 1)
+10:49:32.909 [info] pbc_connects: 0 -> 1 (expected 1)
+10:49:32.909 [info] pbc_active: 0 -> 1 (expected 1)
+10:49:32.909 [info] Force Read Repair
+10:50:13.448 [info] read_repairs_total: 0 -> 0 (expected 0)
+10:50:13.449 [info] read_repairs: 0 -> 0 (expected 0)
+10:50:53.829 [info] read_repairs_total: 0 -> 1 (expected 1)
+10:50:53.829 [info] read_repairs: 0 -> 1 (expected 1)
+10:50:53.829 [notice] jmx_verify Test Run Complete
+
+Test Results:
+jmx_verify-bitcask: pass
+---------------------------------------------
+0 Tests Failed
+1 Tests Passed
+That's 100.0% for those keeping score
+10:50:53.830 [info] Multiple tests run or no failure
+10:50:54.330 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev1/bin/riak stop ~ ok.
+10:50:54.806 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev2/bin/riak stop ~ wasn't running.
+10:50:55.355 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev3/bin/riak stop ~ wasn't running.
+10:50:55.910 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev4/bin/riak stop ~ wasn't running.
+10:50:56.578 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev5/bin/riak stop ~ wasn't running.
+10:50:57.099 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev6/bin/riak stop ~ wasn't running.
+10:50:57.693 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev1/bin/riak stop ~ wasn't running.
+10:50:58.413 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev2/bin/riak stop ~ wasn't running.
+10:50:59.116 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev3/bin/riak stop ~ wasn't running.
+10:50:59.826 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev4/bin/riak stop ~ wasn't running.
+10:51:00.572 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev5/bin/riak stop ~ wasn't running.
+10:51:01.274 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev6/bin/riak stop ~ wasn't running.

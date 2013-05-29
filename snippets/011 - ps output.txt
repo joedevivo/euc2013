@@ -1,0 +1,5 @@
+➜ ps -ax
+96410 ??         0:00.57 /usr/bin/java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=41111 
+➜ kill 96410
+➜ ps -ax 
+97142 ??         0:00.43 /usr/bin/java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=41111 
