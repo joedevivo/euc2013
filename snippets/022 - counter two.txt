@@ -1,0 +1,11 @@
+2013-05-29 14:22:52.301 [info] <0.2444.0> "stopping for test purposes"
+2013-05-29 14:22:53.004 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 47923 exited with code 1. Retry #0.
+2013-05-29 14:22:55.636 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 47960 exited with code 1. Retry #1.
+2013-05-29 14:22:58.305 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 47985 exited with code 1. Retry #2.
+2013-05-29 14:23:00.979 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 48012 exited with code 1. Retry #3.
+2013-05-29 14:23:03.640 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 48049 exited with code 1. Retry #4.
+2013-05-29 14:23:06.428 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 48074 exited with code 1. Retry #5.
+2013-05-29 14:23:09.076 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 48111 exited with code 1. Retry #6.
+2013-05-29 14:23:11.795 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 48138 exited with code 1. Retry #7.
+2013-05-29 14:23:14.484 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 48175 exited with code 1. Retry #8.
+2013-05-29 14:23:17.214 [info] <0.2454.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 48200 exited with code 1. Retry #9.

@@ -1,51 +1,506 @@
-14:26:12.574 [info] Resetting nodes to fresh state
-14:26:12.574 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" reset HEAD --hard
-14:26:13.073 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" clean -fd
-14:26:13.363 [info] Cleaning up lingering pipe directories
-14:26:13.364 [warning] rt:set_backend doesn't recognize undefined as a legit backend, using the default.
-14:26:13.460 [info] Checking for presence of java
-14:26:13.469 [info] jmx_verify prereqs: [{"java",true}]
-14:26:13.469 [notice] Running Test jmx_verify
-14:26:14.479 [info] Test Runner `uname -a` : Darwin Black13.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64
+console.log
+2013-05-29 07:11:58.295 [info] <0.7.0> Application lager started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.348 [info] <0.7.0> Application sasl started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.359 [info] <0.7.0> Application crypto started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.359 [info] <0.7.0> Application public_key started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.382 [info] <0.7.0> Application ssl started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.397 [info] <0.7.0> Application riak_sysmon started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.427 [info] <0.7.0> Application os_mon started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.439 [info] <0.57.0> alarm_handler: {set,{{disk_almost_full,"97465735"},[]}}
+2013-05-29 07:11:58.443 [info] <0.57.0> alarm_handler: {set,{system_memory_high_watermark,[]}}
+2013-05-29 07:11:58.472 [info] <0.7.0> Application runtime_tools started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:58.841 [info] <0.7.0> Application snmp started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.031 [info] <0.7.0> Application mnesia started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.054 [info] <0.7.0> Application erlang_js started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.094 [info] <0.7.0> Application inets started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.100 [info] <0.7.0> Application mochiweb started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.117 [info] <0.7.0> Application webmachine started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.118 [info] <0.7.0> Application basho_stats started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.132 [info] <0.7.0> Application bitcask started on node 'dev1@127.0.0.1'
+2013-05-29 07:11:59.204 [warning] <0.193.0>@riak_core_ring_manager:reload_ring:244 No ring file available.
+2013-05-29 07:11:59.425 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_core,vnode_routing} = proxy
+2013-05-29 07:11:59.447 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_core,staged_joins} = true
+2013-05-29 07:11:59.501 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_pipe,trace_format} = ordsets
+2013-05-29 07:11:59.557 [info] <0.323.0>@riak_core:wait_for_application:450 Waiting for application riak_pipe to start (0 seconds).
+2013-05-29 07:11:59.658 [info] <0.341.0>@riak_kv_env:doc_env:42 Environment and OS variables:
+2013-05-29 07:11:59.659 [info] <0.323.0>@riak_core:wait_for_application:444 Wait complete for application riak_pipe (0 seconds)
+2013-05-29 07:11:59.716 [info] <0.541.0>@riak_core:wait_for_service:470 Waiting for service riak_kv to start (0 seconds)
+2013-05-29 07:11:59.853 [info] <0.558.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.558.0>)
+2013-05-29 07:11:59.856 [info] <0.559.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.559.0>)
+2013-05-29 07:11:59.860 [info] <0.560.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.560.0>)
+2013-05-29 07:11:59.863 [info] <0.561.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.561.0>)
+2013-05-29 07:11:59.866 [info] <0.562.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.562.0>)
+2013-05-29 07:11:59.869 [info] <0.563.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.563.0>)
+2013-05-29 07:11:59.872 [info] <0.564.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.564.0>)
+2013-05-29 07:11:59.875 [info] <0.565.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_map) host starting (<0.565.0>)
+2013-05-29 07:11:59.878 [info] <0.567.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_reduce) host starting (<0.567.0>)
+2013-05-29 07:11:59.881 [info] <0.568.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_reduce) host starting (<0.568.0>)
+2013-05-29 07:11:59.884 [info] <0.569.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_reduce) host starting (<0.569.0>)
+2013-05-29 07:11:59.887 [info] <0.570.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_reduce) host starting (<0.570.0>)
+2013-05-29 07:11:59.893 [info] <0.571.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_reduce) host starting (<0.571.0>)
+2013-05-29 07:11:59.897 [info] <0.572.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_reduce) host starting (<0.572.0>)
+2013-05-29 07:11:59.901 [info] <0.574.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_hook) host starting (<0.574.0>)
+2013-05-29 07:11:59.903 [info] <0.575.0>@riak_kv_js_vm:init:76 Spidermonkey VM (thread stack: 16MB, max heap: 8MB, pool: riak_kv_js_hook) host starting (<0.575.0>)
+2013-05-29 07:11:59.904 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,vnode_vclocks} = true
+2013-05-29 07:11:59.925 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,legacy_keylisting} = false
+2013-05-29 07:11:59.946 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,listkeys_backpressure} = true
+2013-05-29 07:11:59.967 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,index_backpressure} = true
+2013-05-29 07:11:59.988 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,mapred_system} = pipe
+2013-05-29 07:12:00.013 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,mapred_2i_pipe} = true
+2013-05-29 07:12:00.034 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,anti_entropy} = enabled_v1
+2013-05-29 07:12:00.056 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_kv,object_format} = v1
+2013-05-29 07:12:00.076 [warning] <0.6.0> lager_error_logger_h dropped 8 messages in the last second that exceeded the limit of 50 messages/sec
+2013-05-29 07:12:00.111 [info] <0.692.0>@riak_core:wait_for_application:450 Waiting for application riak_kv to start (0 seconds).
+2013-05-29 07:12:00.179 [info] <0.713.0>@riak_core:wait_for_service:470 Waiting for service riak_kv to start (0 seconds)
+2013-05-29 07:12:00.212 [info] <0.692.0>@riak_core:wait_for_application:444 Wait complete for application riak_kv (0 seconds)
+2013-05-29 07:12:00.785 [info] <0.713.0>@riak_core:wait_for_service:464 Wait complete for service riak_kv (0 seconds)
+2013-05-29 07:12:00.828 [info] <0.541.0>@riak_core:wait_for_service:464 Wait complete for service riak_kv (1 seconds)
+2013-05-29 07:12:00.832 [info] <0.199.0>@riak_core_capability:process_capability_changes:529 New capability: {riak_repl,bloom_fold} = true
+2013-05-29 07:12:00.875 [info] <0.713.0>@riak_repl_app:start:52 REPL CS block skip disabled
+2013-05-29 07:12:00.940 [info] <0.1835.0>@riak_core_service_mgr:start_link:108 Starting Core Service Manager at {"127.0.0.1",10016}
+2013-05-29 07:12:00.948 [info] <0.1834.0>@riak_repl2_leader:become_leader:213 Leader2: 'dev1@127.0.0.1' elected as replication leader
+2013-05-29 07:12:00.989 [info] <0.1836.0>@riak_core_service_mgr:start_dispatcher:497 Service manager: listening on 127.0.0.1:10016
+2013-05-29 07:12:01.003 [warning] <0.6.0> lager_error_logger_h dropped 2 messages in the last second that exceeded the limit of 50 messages/sec
+2013-05-29 07:12:01.014 [info] <0.2047.0>@riak_core_cluster_mgr:become_leader:652 ClusterManager: 'dev1@127.0.0.1' becoming the leader
+2013-05-29 07:12:01.020 [info] <0.2048.0>@riak_core_tcp_mon:init:157 Starting TCP Monitor
+2013-05-29 07:12:01.260 [info] <0.192.0>@riak_repl_ring_handler:update_ring:95 Repushing new REPL config!
+2013-05-29 07:12:01.298 [info] <0.7.0> Application riak_repl started on node 'dev1@127.0.0.1'
+2013-05-29 07:12:01.433 [info] <0.7.0> Application riak_snmp started on node 'dev1@127.0.0.1'
+2013-05-29 07:12:01.452 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:01.454 [info] <0.7.0> Application riak_jmx started on node 'dev1@127.0.0.1'
+2013-05-29 07:12:01.461 [info] <0.7.0> Application cluster_info started on node 'dev1@127.0.0.1'
+2013-05-29 07:12:01.461 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34546 started.
+2013-05-29 07:12:01.472 [info] <0.7.0> Application riak_control started on node 'dev1@127.0.0.1'
+2013-05-29 07:12:01.473 [info] <0.7.0> Application compiler started on node 'dev1@127.0.0.1'
+2013-05-29 07:12:01.812 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:01.812 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:02.151 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34546 exited with code 1. Retrying.
+2013-05-29 07:12:02.152 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:04.153 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:04.160 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34571 started.
+2013-05-29 07:12:04.460 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:04.460 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:04.801 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34571 exited with code 1. Retrying.
+2013-05-29 07:12:04.801 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:06.802 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:06.813 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34608 started.
+2013-05-29 07:12:07.137 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:07.137 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:07.478 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34608 exited with code 1. Retrying.
+2013-05-29 07:12:07.478 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:09.480 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:09.492 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34634 started.
+2013-05-29 07:12:09.862 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:09.862 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:10.202 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34634 exited with code 1. Retrying.
+2013-05-29 07:12:10.202 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:12.203 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:12.210 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34672 started.
+2013-05-29 07:12:12.487 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:12.487 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:12.819 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34672 exited with code 1. Retrying.
+2013-05-29 07:12:12.819 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:14.820 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:14.827 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34697 started.
+2013-05-29 07:12:15.105 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:15.105 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:15.443 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34697 exited with code 1. Retrying.
+2013-05-29 07:12:15.443 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:17.444 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:17.451 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34734 started.
+2013-05-29 07:12:17.741 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:17.741 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:18.081 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34734 exited with code 1. Retrying.
+2013-05-29 07:12:18.081 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:20.082 [info] <0.2178.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:20.089 [info] <0.2178.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34759 started.
+2013-05-29 07:12:20.368 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:20.368 [info] <0.2178.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:20.706 [info] <0.2178.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34759 exited with code 1. Retrying.
+2013-05-29 07:12:20.706 [info] <0.2178.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:21.362 [info] <0.2446.0> "stopping for test purposes"
 
-14:26:14.479 [info] Riak path: "/Users/joe/riak_test_ee"
-14:26:14.496 [info] rtdev:update_app_config_file(/Users/joe/riak_test_ee/current/dev/dev1/etc/app.config, [{riak_jmx,[{enabled,true},{port,80}]}])
-14:26:14.509 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak start
-14:26:20.671 [debug] Supervisor inet_gethost_native_sup started undefined at pid <0.112.0>
-14:26:20.671 [debug] Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.111.0>
-14:26:20.757 [info] Wait until 'dev1@127.0.0.1' is pingable
-14:26:20.763 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/hashtree_intercepts.erl on node dev1@127.0.0.1
-14:26:20.787 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/intercept.erl on node dev1@127.0.0.1
-14:26:20.880 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_ring_manager_intercepts.erl on node dev1@127.0.0.1
-14:26:20.892 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_vnode_proxy_sup_intercepts.erl on node dev1@127.0.0.1
-14:26:20.907 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_get_fsm_intercepts.erl on node dev1@127.0.0.1
-14:26:20.919 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_put_fsm_intercepts.erl on node dev1@127.0.0.1
-14:26:20.931 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_vnode_intercepts.erl on node dev1@127.0.0.1
-14:26:20.978 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_pipe_vnode_intercepts.erl on node dev1@127.0.0.1
-14:26:20.991 [info] Wait until 'dev1@127.0.0.1' is pingable
-14:26:20.992 [info] Check 'dev1@127.0.0.1' is a singleton
-14:26:21.032 [info] Deployed nodes: ['dev1@127.0.0.1']
-14:26:21.033 [info] Waiting for services [riak_kv] to start on ['dev1@127.0.0.1'].
-14:26:41.035 [info] calling riak_jmx:stop() to reset retry counters
-14:26:41.043 [info] loading lager backend on node
-14:26:41.048 [info] Now we're capturing logs on the node, let's start jmx
-14:26:41.048 [info] calling riak_jmx:start() to get these retries started
-14:27:21.057 [info] It can fail, it can fail 10 times
-14:27:21.058 [warning] jmx_verify failed: {{assertEqual_failed,[{module,jmx_verify},{line,205},{expression,"{ retry_count , RetryCount }"},{expected,{retry_count,10}},{value,{retry_count,0}}]},[{jmx_verify,'-test_supervision/0-fun-2-',2,[{file,"tests/jmx_verify.erl"},{line,205}]},{jmx_verify,test_supervision,0,[{file,"tests/jmx_verify.erl"},{line,205}]},{jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,29}]}]}
-14:27:21.058 [error] Error in process <0.105.0> on node 'riak_test@127.0.0.1' with exit value: {{assertEqual_failed,[{module,jmx_verify},{line,205},{expression,"{ retry_count , RetryCount }"},{expected,{retry_count,10}},{value,{retry_count,0}}]},[{jmx_verify,'-test_supervision/0-fun-2-',2,[{file,"tests/jmx_verify.... 
+2013-05-29 07:12:21.364 [info] <0.7.0> Application riak_jmx exited with reason: stopped
+2013-05-29 07:12:21.369 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:21.370 [info] <0.7.0> Application riak_jmx started on node 'dev1@127.0.0.1'
+2013-05-29 07:12:21.376 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34772 started.
+2013-05-29 07:12:21.678 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:21.678 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:22.013 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34772 exited with code 1. Retrying.
+2013-05-29 07:12:22.013 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:24.014 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:24.021 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34809 started.
+2013-05-29 07:12:24.298 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:24.298 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:24.627 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34809 exited with code 1. Retrying.
+2013-05-29 07:12:24.627 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:26.628 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:26.635 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34834 started.
+2013-05-29 07:12:26.926 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:26.926 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:27.259 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34834 exited with code 1. Retrying.
+2013-05-29 07:12:27.259 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:29.260 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:29.268 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34871 started.
+2013-05-29 07:12:29.574 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:29.575 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:29.913 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34871 exited with code 1. Retrying.
+2013-05-29 07:12:29.913 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:31.914 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:31.922 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34896 started.
+2013-05-29 07:12:32.271 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:32.272 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:32.608 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34896 exited with code 1. Retrying.
+2013-05-29 07:12:32.608 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:34.609 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:34.616 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34933 started.
+2013-05-29 07:12:34.908 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:34.908 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:35.247 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34933 exited with code 1. Retrying.
+2013-05-29 07:12:35.247 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:37.249 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:37.255 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34958 started.
+2013-05-29 07:12:37.534 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:37.534 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:37.872 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34958 exited with code 1. Retrying.
+2013-05-29 07:12:37.873 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:39.873 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:39.883 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 34996 started.
+2013-05-29 07:12:40.212 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:40.212 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:40.550 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 34996 exited with code 1. Retrying.
+2013-05-29 07:12:40.550 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:42.551 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:42.558 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35021 started.
+2013-05-29 07:12:42.846 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:42.846 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:43.186 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35021 exited with code 1. Retrying.
+2013-05-29 07:12:43.186 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:45.187 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:45.194 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35058 started.
+2013-05-29 07:12:45.485 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:45.485 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:45.821 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35058 exited with code 1. Retrying.
+2013-05-29 07:12:45.821 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:47.822 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:47.829 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35083 started.
+2013-05-29 07:12:48.145 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:48.145 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:48.483 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35083 exited with code 1. Retrying.
+2013-05-29 07:12:48.483 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:50.484 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:50.492 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35114 started.
+2013-05-29 07:12:50.771 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:50.772 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:51.109 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35114 exited with code 1. Retrying.
+2013-05-29 07:12:51.109 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:53.110 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:53.117 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35154 started.
+2013-05-29 07:12:53.400 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:53.400 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:53.740 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35154 exited with code 1. Retrying.
+2013-05-29 07:12:53.740 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:55.741 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:55.749 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35180 started.
+2013-05-29 07:12:56.053 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:56.053 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:56.391 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35180 exited with code 1. Retrying.
+2013-05-29 07:12:56.391 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:12:58.392 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:12:58.400 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35217 started.
+2013-05-29 07:12:58.686 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:12:58.686 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:12:59.023 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35217 exited with code 1. Retrying.
+2013-05-29 07:12:59.023 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:01.024 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:01.031 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35244 started.
+2013-05-29 07:13:01.318 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:01.318 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:01.659 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35244 exited with code 1. Retrying.
+2013-05-29 07:13:01.659 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:03.660 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:03.667 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35281 started.
+2013-05-29 07:13:03.948 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:03.949 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:04.286 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35281 exited with code 1. Retrying.
+2013-05-29 07:13:04.286 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:06.287 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:06.294 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35306 started.
+2013-05-29 07:13:06.592 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:06.592 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:06.928 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35306 exited with code 1. Retrying.
+2013-05-29 07:13:06.928 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:08.929 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:08.936 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35343 started.
+2013-05-29 07:13:09.226 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:09.226 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:09.563 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35343 exited with code 1. Retrying.
+2013-05-29 07:13:09.563 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:11.564 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:11.572 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35368 started.
+2013-05-29 07:13:11.858 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:11.859 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:12.198 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35368 exited with code 1. Retrying.
+2013-05-29 07:13:12.198 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:14.199 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:14.207 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35405 started.
+2013-05-29 07:13:14.515 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:14.515 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:14.851 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35405 exited with code 1. Retrying.
+2013-05-29 07:13:14.851 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:16.852 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:16.860 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35430 started.
+2013-05-29 07:13:17.166 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:17.166 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:17.503 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35430 exited with code 1. Retrying.
+2013-05-29 07:13:17.503 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:19.504 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:19.511 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35467 started.
+2013-05-29 07:13:19.792 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:19.793 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:20.131 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35467 exited with code 1. Retrying.
+2013-05-29 07:13:20.131 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:22.132 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:22.140 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35492 started.
+2013-05-29 07:13:22.429 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:22.429 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:22.766 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35492 exited with code 1. Retrying.
+2013-05-29 07:13:22.766 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:24.767 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:24.774 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35526 started.
+2013-05-29 07:13:25.064 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:25.064 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:25.401 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35526 exited with code 1. Retrying.
+2013-05-29 07:13:25.401 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:27.402 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:27.409 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35555 started.
+2013-05-29 07:13:27.697 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:27.697 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:28.036 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35555 exited with code 1. Retrying.
+2013-05-29 07:13:28.037 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:30.038 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:30.045 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35581 started.
+2013-05-29 07:13:30.382 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:30.382 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:30.719 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35581 exited with code 1. Retrying.
+2013-05-29 07:13:30.719 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:32.721 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:32.728 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35618 started.
+2013-05-29 07:13:33.016 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:33.016 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:33.357 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35618 exited with code 1. Retrying.
+2013-05-29 07:13:33.357 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:35.358 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:35.365 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35643 started.
+2013-05-29 07:13:35.670 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:35.670 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:36.009 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35643 exited with code 1. Retrying.
+2013-05-29 07:13:36.009 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:38.010 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:38.018 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35680 started.
+2013-05-29 07:13:38.304 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:38.304 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:38.643 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35680 exited with code 1. Retrying.
+2013-05-29 07:13:38.643 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:40.644 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:40.651 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35705 started.
+2013-05-29 07:13:40.957 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:40.957 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:41.296 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35705 exited with code 1. Retrying.
+2013-05-29 07:13:41.296 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:43.297 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:43.306 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35742 started.
+2013-05-29 07:13:43.621 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:43.622 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:43.961 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35742 exited with code 1. Retrying.
+2013-05-29 07:13:43.961 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:45.962 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:45.969 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35767 started.
+2013-05-29 07:13:46.279 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:46.279 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:46.617 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35767 exited with code 1. Retrying.
+2013-05-29 07:13:46.617 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:48.618 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:48.626 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35804 started.
+2013-05-29 07:13:48.917 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:48.917 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:49.255 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35804 exited with code 1. Retrying.
+2013-05-29 07:13:49.255 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:51.256 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:51.263 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35829 started.
+2013-05-29 07:13:51.573 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:51.573 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:51.909 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35829 exited with code 1. Retrying.
+2013-05-29 07:13:51.909 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:53.910 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:53.917 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35873 started.
+2013-05-29 07:13:54.200 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:54.201 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:54.538 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35873 exited with code 1. Retrying.
+2013-05-29 07:13:54.538 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:56.540 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:56.548 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 35958 started.
+2013-05-29 07:13:56.858 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:56.858 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:57.198 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 35958 exited with code 1. Retrying.
+2013-05-29 07:13:57.198 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:13:59.199 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:13:59.206 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36024 started.
+2013-05-29 07:13:59.484 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:13:59.484 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:13:59.820 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36024 exited with code 1. Retrying.
+2013-05-29 07:13:59.821 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:01.822 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:01.830 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36049 started.
+2013-05-29 07:14:02.117 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:02.117 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:02.453 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36049 exited with code 1. Retrying.
+2013-05-29 07:14:02.453 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:04.454 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:04.461 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36086 started.
+2013-05-29 07:14:04.747 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:04.747 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:05.082 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36086 exited with code 1. Retrying.
+2013-05-29 07:14:05.082 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:07.083 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:07.090 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36111 started.
+2013-05-29 07:14:07.375 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:07.375 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:07.713 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36111 exited with code 1. Retrying.
+2013-05-29 07:14:07.713 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:09.715 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:09.721 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36148 started.
+2013-05-29 07:14:10.001 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:10.001 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:10.340 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36148 exited with code 1. Retrying.
+2013-05-29 07:14:10.340 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:12.341 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:12.353 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36177 started.
+2013-05-29 07:14:12.656 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:12.657 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:12.997 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36177 exited with code 1. Retrying.
+2013-05-29 07:14:12.997 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:14.998 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:15.005 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36217 started.
+2013-05-29 07:14:15.306 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:15.306 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:15.643 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36217 exited with code 1. Retrying.
+2013-05-29 07:14:15.643 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:17.644 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:17.651 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36249 started.
+2013-05-29 07:14:17.939 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:17.940 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:18.276 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36249 exited with code 1. Retrying.
+2013-05-29 07:14:18.276 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:20.277 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:20.283 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36274 started.
+2013-05-29 07:14:20.593 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:20.593 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:20.930 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36274 exited with code 1. Retrying.
+2013-05-29 07:14:20.930 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:22.931 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:22.938 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36311 started.
+2013-05-29 07:14:23.254 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:23.254 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:23.592 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36311 exited with code 1. Retrying.
+2013-05-29 07:14:23.592 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:25.593 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:25.603 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36337 started.
+2013-05-29 07:14:25.913 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:25.913 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:26.250 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36337 exited with code 1. Retrying.
+2013-05-29 07:14:26.250 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:28.251 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:28.258 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36374 started.
+2013-05-29 07:14:28.547 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:28.547 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:28.886 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36374 exited with code 1. Retrying.
+2013-05-29 07:14:28.886 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:30.887 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:30.894 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36399 started.
+2013-05-29 07:14:31.212 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:31.212 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:31.551 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36399 exited with code 1. Retrying.
+2013-05-29 07:14:31.551 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:33.552 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:33.559 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36436 started.
+2013-05-29 07:14:33.839 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:33.840 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:34.178 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36436 exited with code 1. Retrying.
+2013-05-29 07:14:34.178 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:36.179 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:36.186 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36461 started.
+2013-05-29 07:14:36.481 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:36.481 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:36.820 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36461 exited with code 1. Retrying.
+2013-05-29 07:14:36.821 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:38.822 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:38.829 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36498 started.
+2013-05-29 07:14:39.121 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:39.122 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:39.461 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36498 exited with code 1. Retrying.
+2013-05-29 07:14:39.461 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+2013-05-29 07:14:41.462 [info] <0.2455.0>@riak_jmx_monitor:jmx:129 java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=80 -jar riak_jmx.jar 127.0.0.1 10018
+2013-05-29 07:14:41.470 [info] <0.2455.0>@riak_jmx_monitor:handle_info:62 JMX server monitor 36547 started.
+2013-05-29 07:14:41.833 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar] Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 80; nested exception is: 
+2013-05-29 07:14:41.834 [info] <0.2455.0>@riak_jmx_monitor:handle_info:67 [riak_jmx.jar]    java.net.BindException: Permission denied
+2013-05-29 07:14:42.169 [info] <0.2455.0>@riak_jmx_monitor:handle_info:78 JMX server monitor 36547 exited with code 1. Retrying.
+2013-05-29 07:14:42.170 [info] <0.2455.0>@riak_jmx_monitor:handle_info:84 riak_jmx_monitor received an 'EXIT', but doesn't care
+
+output
 
 
-14:27:21.059 [error] 
+07:11:50.725 [info] Resetting nodes to fresh state
+07:11:50.725 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" reset HEAD --hard
+07:11:53.388 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" clean -fd
+07:11:53.759 [info] Cleaning up lingering pipe directories
+07:11:53.760 [warning] rt:set_backend doesn't recognize undefined as a legit backend, using the default.
+07:11:53.931 [info] Checking for presence of java
+07:11:53.941 [info] jmx_verify prereqs: [{"java",true}]
+07:11:53.942 [notice] Running Test jmx_verify
+07:11:54.952 [info] Test Runner `uname -a` : Darwin Black13.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64
+
+07:11:54.953 [info] Riak path: "/Users/joe/riak_test_ee"
+07:11:54.992 [info] rtdev:update_app_config_file(/Users/joe/riak_test_ee/current/dev/dev1/etc/app.config, [{riak_jmx,[{enabled,true},{port,80}]}])
+07:11:55.008 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak start
+07:12:01.028 [debug] Supervisor inet_gethost_native_sup started undefined at pid <0.112.0>
+07:12:01.029 [debug] Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.111.0>
+07:12:01.067 [info] Wait until 'dev1@127.0.0.1' is pingable
+07:12:01.072 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/hashtree_intercepts.erl on node dev1@127.0.0.1
+07:12:01.096 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/intercept.erl on node dev1@127.0.0.1
+07:12:01.188 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_ring_manager_intercepts.erl on node dev1@127.0.0.1
+07:12:01.200 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_vnode_proxy_sup_intercepts.erl on node dev1@127.0.0.1
+07:12:01.211 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_get_fsm_intercepts.erl on node dev1@127.0.0.1
+07:12:01.234 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_put_fsm_intercepts.erl on node dev1@127.0.0.1
+07:12:01.241 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_vnode_intercepts.erl on node dev1@127.0.0.1
+07:12:01.290 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_pipe_vnode_intercepts.erl on node dev1@127.0.0.1
+07:12:01.309 [info] Wait until 'dev1@127.0.0.1' is pingable
+07:12:01.311 [info] Check 'dev1@127.0.0.1' is a singleton
+07:12:01.354 [info] Deployed nodes: ['dev1@127.0.0.1']
+07:12:01.355 [info] Waiting for services [riak_kv] to start on ['dev1@127.0.0.1'].
+07:12:21.357 [info] calling riak_jmx:stop() to reset retry counters
+07:12:21.364 [info] loading lager backend on node
+07:12:21.368 [info] Now we're capturing logs on the node, let's start jmx
+07:12:21.368 [info] calling riak_jmx:start() to get these retries started
+07:13:01.373 [info] It can fail, it can fail 10 times
+07:13:01.374 [warning] jmx_verify failed: {{assertEqual_failed,[{module,jmx_verify},{line,205},{expression,"{ retry_count , RetryCount }"},{expected,{retry_count,10}},{value,{retry_count,15}}]},[{jmx_verify,'-test_supervision/0-fun-2-',2,[{file,"tests/jmx_verify.erl"},{line,205}]},{jmx_verify,test_supervision,0,[{file,"tests/jmx_verify.erl"},{line,205}]},{jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,29}]}]}
+07:13:01.374 [error] Error in process <0.105.0> on node 'riak_test@127.0.0.1' with exit value: {{assertEqual_failed,[{module,jmx_verify},{line,205},{expression,"{ retry_count , RetryCount }"},{expected,{retry_count,10}},{value,{retry_count,15}}]},[{jmx_verify,'-test_supervision/0-fun-2-',2,[{file,"tests/jmx_verify.... 
+
+
+07:13:01.375 [error] 
 ================ jmx_verify failure stack trace =====================
 {{assertEqual_failed,[{module,jmx_verify},
                       {line,205},
                       {expression,"{ retry_count , RetryCount }"},
                       {expected,{retry_count,10}},
-                      {value,{retry_count,0}}]},
+                      {value,{retry_count,15}}]},
  [{jmx_verify,'-test_supervision/0-fun-2-',2,
               [{file,"tests/jmx_verify.erl"},{line,205}]},
   {jmx_verify,test_supervision,0,[{file,"tests/jmx_verify.erl"},{line,205}]},
   {jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,29}]}]}
 =====================================================================
 
-14:27:21.059 [notice] jmx_verify Test Run Complete
+07:13:01.375 [notice] jmx_verify Test Run Complete
+
+Test Results:
+jmx_verify-bitcask: fail

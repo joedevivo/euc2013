@@ -1,0 +1,113 @@
+Riak JMX?
+
+Start with an existing feature: riak jmx
+
+why jmx? because it doesn't assume understanding of some more complex features of riak
+
+So first, let's validate the existing functionality!
+
+Uh Oh! There's no real JMX client in Erlang, so let's make a quick little tool in java
+
+Dump.java - iterates through JMX Bean's fields, outputs JSON
+
+Now we have that AND an existing test for riak_stats we can copy that and make a test for jmx
+
+boom! We've got a test of the JMX feature
+
+time passes as time tends to
+
+Somebody wants to update riak_jmx with moar features!
+
+Handwavey riak_jmx rearchitecture +mvn to the build
+
+Then I heard somewhere at excessive number of crashes of the JMX bean could actually bring down riak! let's test it out!
+
+We're going to need to kill some processes here... so what do those processes look like?
+?assert(fail),
+
+->  make clean && make
+➜  ~RT_HOME git:(jd-jmx) ✗ ./riak_test -c ee -t jmx_verify
+
+So, we find ourselves in a tricky situation here. 
+You've run a single test, and it has failed.
+Would you like to leave Riak running in order to debug?
+[Y/n]
+
+ps -ax
+96410 ??         0:00.57 /usr/bin/java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=41111 
+kill 96410
+ps -ax 
+97142 ??         0:00.43 /usr/bin/java -server -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=41111 
+
+killing processes is too slow!
+
+kill_jmx() ->
+    {0, JMXProcs} = rt:cmd("ps -ax | grep com.sun.management.jmxremote"),
+    Pids = filter_procs(string:tokens(JMXProcs, "\n")),
+    %%Pids = [ hd(string:tokens(Line, "\s")) || Line <- JMXProcLines],
+    [ rt:cmd("kill -9 " ++ Pid) || Pid <- Pids].
+
+filter_procs([]) -> [];
+filter_procs([Proc|T]) ->
+    case string:str(Proc, "java -server") of
+        0 -> filter_procs(T);
+        _ -> [hd(string:tokens(Proc, "\s"))| filter_procs(T)]
+    end.
+
+took 2-3 seconds a proc
+
+so, we cheat. tell jmx to start on port 80 (which is restricted)
+
+That's a bingo! JMX is now killing the entre cluster
+
+hand wavey fixes!
+
+it works now!
+
+====
+Handwavey java unit test stuff
+
+==========
+We're going to introduce parity... let's start by looking at the existing test's process_key/1 method
+
+add this: process_key(Key) -> Key.
+because we don't want the test framework to explode on unexpected stats.
+The current implementation has a finite set, but the new impl should be able to grow dynamically
+
+10:55:20.731 [error] 
+================ jmx_verify failure stack trace =====================
+{function_clause,[{jmx_verify,process_key,
+                              [<<"riak_kv_stat_ts">>],
+                              [{file,"tests/jmx_verify.erl"},{line,148}]},
+                  {jmx_verify,'-jmx_dump/1-lc$^0/1-0-',1,
+                              [{file,"tests/jmx_verify.erl"},{line,146}]},
+                  {jmx_verify,confirm,0,
+                              [{file,"tests/jmx_verify.erl"},{line,42}]}]}
+=====================================================================
+
+For our new impl, we'll want to remove process_key entirely because the whole point of process_key
+is to compensate for the exisiting lack of parity.
+
+Once we do that, the test fails in the current implementation
+11:22:07.096 [error] 
+================ jmx_verify failure stack trace =====================
+{{assertNotEqual_failed,[{module,jmx_verify},
+                         {line,129},
+                         {expression,"{ Key , 0 }"},
+                         {value,{<<"cpu_nprocs">>,0}}]},
+ [{jmx_verify,'-verify_nz/2-fun-0-',2,
+              [{file,"tests/jmx_verify.erl"},{line,129}]},
+  {jmx_verify,'-verify_nz/2-lc$^0/1-0-',2,
+              [{file,"tests/jmx_verify.erl"},{line,129}]},
+  {jmx_verify,confirm,0,[{file,"tests/jmx_verify.erl"},{line,45}]}]}
+=====================================================================
+
+
+As for parity, what we really want to test is that all the jmx stats are the same as "riak status"
+and riak-repl status
+
+ hand wavey jmx rewrite
+
+it works!
+
+hand wavey rerewrite

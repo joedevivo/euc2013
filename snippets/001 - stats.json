@@ -1,6 +1,4 @@
-/*
-http://localhost:8091/stats riak ee 1.2.1
-*/
+/* http://localhost:8091/stats riak ee 1.2.1 */
 {
     "vnode_gets":0,  
     "vnode_gets_total":0,
@@ -143,4 +141,5 @@ http://localhost:8091/stats riak ee 1.2.1
     "riak_pipe_vnodeq_median":0,
     "riak_pipe_vnodeq_mean":0,
     "riak_pipe_vnodeq_max":0,
-    "riak_pipe_vnodeq_total":0}
+    "riak_pipe_vnodeq_total":0
+}
