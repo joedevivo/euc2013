@@ -1,0 +1,104 @@
+09:39:25.848 [info] Resetting nodes to fresh state
+09:39:25.848 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" reset HEAD --hard
+09:39:28.073 [info] Running: git --git-dir="/Users/joe/riak_test_ee/.git" --work-tree="/Users/joe/riak_test_ee/" clean -fd
+09:39:29.300 [info] Cleaning up lingering pipe directories
+09:39:29.303 [warning] rt:set_backend doesn't recognize undefined as a legit backend, using the default.
+09:39:29.410 [info] Checking for presence of java
+09:39:29.422 [info] jmx_verify prereqs: [{"java",true}]
+09:39:29.422 [notice] Running Test jmx_verify
+09:39:30.431 [info] Test Runner `uname -a` : Darwin Black13.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64
+
+09:39:30.432 [info] Riak path: "/Users/joe/riak_test_ee"
+09:39:30.454 [info] rtdev:update_app_config_file(/Users/joe/riak_test_ee/current/dev/dev1/etc/app.config, [{riak_jmx,[{enabled,true},{port,80}]}])
+09:39:30.470 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak start
+09:39:34.974 [debug] Supervisor inet_gethost_native_sup started undefined at pid <0.111.0>
+09:39:34.974 [debug] Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.110.0>
+09:39:34.989 [info] Wait until 'dev1@127.0.0.1' is pingable
+09:39:34.994 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/hashtree_intercepts.erl on node dev1@127.0.0.1
+09:39:35.005 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/intercept.erl on node dev1@127.0.0.1
+09:39:35.060 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_ring_manager_intercepts.erl on node dev1@127.0.0.1
+09:39:35.065 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_vnode_proxy_sup_intercepts.erl on node dev1@127.0.0.1
+09:39:35.071 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_get_fsm_intercepts.erl on node dev1@127.0.0.1
+09:39:35.077 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_put_fsm_intercepts.erl on node dev1@127.0.0.1
+09:39:35.083 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_vnode_intercepts.erl on node dev1@127.0.0.1
+09:39:35.110 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_pipe_vnode_intercepts.erl on node dev1@127.0.0.1
+09:39:35.119 [info] Wait until 'dev1@127.0.0.1' is pingable
+09:39:35.119 [info] Wait until the ring manager is up on 'dev1@127.0.0.1'
+09:39:35.121 [info] Check 'dev1@127.0.0.1' is a singleton
+09:39:35.141 [info] Deployed nodes: ['dev1@127.0.0.1']
+09:39:35.141 [info] Waiting for services [riak_kv] to start on ['dev1@127.0.0.1'].
+09:40:04.177 [info] calling riak_jmx:stop() to reset retry counters
+09:40:04.248 [info] loading lager backend on node
+09:40:04.250 [info] Now we're capturing logs on the node, let's start jmx
+09:40:04.251 [info] calling riak_jmx:start() to get these retries started
+09:40:44.260 [info] It can fail, it can fail 10 times
+09:40:44.266 [info] Stopping riak on 'dev1@127.0.0.1'
+09:40:54.262 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak stop
+09:40:58.278 [info] Testing application:stop()
+09:40:58.278 [info] Riak path: "/Users/joe/riak_test_ee"
+09:40:58.287 [info] rtdev:update_app_config_file(/Users/joe/riak_test_ee/current/dev/dev1/etc/app.config, [{riak_jmx,[{enabled,true},{port,41111}]}])
+09:40:58.299 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak start
+09:41:02.566 [info] Wait until 'dev1@127.0.0.1' is pingable
+09:41:02.567 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/hashtree_intercepts.erl on node dev1@127.0.0.1
+09:41:02.581 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/intercept.erl on node dev1@127.0.0.1
+09:41:02.637 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_ring_manager_intercepts.erl on node dev1@127.0.0.1
+09:41:02.643 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_vnode_proxy_sup_intercepts.erl on node dev1@127.0.0.1
+09:41:02.649 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_get_fsm_intercepts.erl on node dev1@127.0.0.1
+09:41:02.656 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_put_fsm_intercepts.erl on node dev1@127.0.0.1
+09:41:02.661 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_vnode_intercepts.erl on node dev1@127.0.0.1
+09:41:02.690 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_pipe_vnode_intercepts.erl on node dev1@127.0.0.1
+09:41:02.700 [info] Wait until 'dev1@127.0.0.1' is pingable
+09:41:02.700 [info] Wait until the ring manager is up on 'dev1@127.0.0.1'
+09:41:02.701 [info] Check 'dev1@127.0.0.1' is a singleton
+09:41:02.702 [info] Deployed nodes: ['dev1@127.0.0.1']
+09:41:02.702 [info] Waiting for services [riak_kv] to start on ['dev1@127.0.0.1'].
+09:41:11.729 [info] Wait until nodes are ready : ['dev1@127.0.0.1']
+09:41:26.731 [info] checking for riak_jmx.jar running.
+09:41:47.126 [info] checking for riak_jmx.jar not running.
+09:41:47.159 [info] Stopping riak on 'dev1@127.0.0.1'
+09:41:57.161 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak stop
+09:42:01.024 [info] Riak path: "/Users/joe/riak_test_ee"
+09:42:01.032 [info] rtdev:update_app_config_file(/Users/joe/riak_test_ee/current/dev/dev1/etc/app.config, [{riak_jmx,[{enabled,true},{port,41111}]}])
+09:42:01.044 [info] Running: /Users/joe/riak_test_ee/current/dev/dev1/bin/riak start
+09:42:05.252 [info] Wait until 'dev1@127.0.0.1' is pingable
+09:42:05.253 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/hashtree_intercepts.erl on node dev1@127.0.0.1
+09:42:05.263 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/intercept.erl on node dev1@127.0.0.1
+09:42:05.313 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_ring_manager_intercepts.erl on node dev1@127.0.0.1
+09:42:05.318 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_core_vnode_proxy_sup_intercepts.erl on node dev1@127.0.0.1
+09:42:05.323 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_get_fsm_intercepts.erl on node dev1@127.0.0.1
+09:42:05.328 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_put_fsm_intercepts.erl on node dev1@127.0.0.1
+09:42:05.333 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_kv_vnode_intercepts.erl on node dev1@127.0.0.1
+09:42:05.359 [debug] Compiling and loading file /Users/joe/dev/basho/riak_test/intercepts/riak_pipe_vnode_intercepts.erl on node dev1@127.0.0.1
+09:42:05.367 [info] Wait until 'dev1@127.0.0.1' is pingable
+09:42:05.368 [info] Wait until the ring manager is up on 'dev1@127.0.0.1'
+09:42:05.369 [info] Check 'dev1@127.0.0.1' is a singleton
+09:42:05.370 [info] Deployed nodes: ['dev1@127.0.0.1']
+09:42:05.370 [info] Waiting for services [riak_kv] to start on ['dev1@127.0.0.1'].
+09:42:14.393 [info] Wait until nodes are ready : ['dev1@127.0.0.1']
+09:42:54.873 [info] perform 5 x  PUT and a GET to increment the stats
+09:42:54.873 [info] as the stat system only does calcs for > 5 readings
+09:43:35.560 [info] node_gets: 0 -> 10 (expected 10)
+09:43:35.560 [info] node_puts: 0 -> 5 (expected 5)
+09:43:35.560 [info] node_gets_total: 0 -> 10 (expected 10)
+09:43:35.561 [info] node_puts_total: 0 -> 5 (expected 5)
+09:43:35.561 [info] vnode_gets: 0 -> 30 (expected 30)
+09:43:35.561 [info] vnode_puts: 0 -> 15 (expected 15)
+09:43:35.562 [info] vnode_gets_total: 0 -> 30 (expected 30)
+09:43:35.562 [info] vnode_puts_total: 0 -> 15 (expected 15)
+09:43:35.562 [info] Make PBC Connection
+09:44:16.102 [info] pbc_connects_total: 0 -> 1 (expected 1)
+09:44:16.103 [info] pbc_connects: 0 -> 1 (expected 1)
+09:44:16.103 [info] pbc_active: 0 -> 1 (expected 1)
+09:44:16.103 [info] Force Read Repair
+09:44:56.688 [info] read_repairs_total: 0 -> 0 (expected 0)
+09:44:56.688 [info] read_repairs: 0 -> 0 (expected 0)
+09:45:37.242 [info] read_repairs_total: 0 -> 1 (expected 1)
+09:45:37.242 [info] read_repairs: 0 -> 1 (expected 1)
+09:45:37.242 [notice] jmx_verify Test Run Complete
+
+Test Results:
+jmx_verify-bitcask: pass
+---------------------------------------------
+0 Tests Failed
+1 Tests Passed
+That's 100.0% for those keeping score

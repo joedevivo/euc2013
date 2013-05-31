@@ -178,7 +178,6 @@ test_supervision() ->
         _ ->
             yay
     end,
-
     ok.
 
 kill_jmx() ->
