@@ -54,16 +54,3 @@ jmx_verify-bitcask: pass
 0 Tests Failed
 1 Tests Passed
 That's 100.0% for those keeping score
-10:50:53.830 [info] Multiple tests run or no failure
-10:50:54.330 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev1/bin/riak stop ~ ok.
-10:50:54.806 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev2/bin/riak stop ~ wasn't running.
-10:50:55.355 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev3/bin/riak stop ~ wasn't running.
-10:50:55.910 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev4/bin/riak stop ~ wasn't running.
-10:50:56.578 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev5/bin/riak stop ~ wasn't running.
-10:50:57.099 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.2.1/dev/dev6/bin/riak stop ~ wasn't running.
-10:50:57.693 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev1/bin/riak stop ~ wasn't running.
-10:50:58.413 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev2/bin/riak stop ~ wasn't running.
-10:50:59.116 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev3/bin/riak stop ~ wasn't running.
-10:50:59.826 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev4/bin/riak stop ~ wasn't running.
-10:51:00.572 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev5/bin/riak stop ~ wasn't running.
-10:51:01.274 [info] Stopping Node... /Users/joe/riak_test_ee/riak_ee-1.3.1/dev/dev6/bin/riak stop ~ wasn't running.
