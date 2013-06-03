@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Let's Write a Test! @joedevivo EUC2013</title>
+    
+    <meta name="description" content="Test Driven Development with riak_test" />
+    <meta name="author" content="Joe DeVivo" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <!--
+        
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+        
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+        
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+        
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+        
+    -->
+    <link href="css/code-1.css" rel="stylesheet" />
+    <link href="css/impress-test.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <h1>Let's Write A Test!</h1>
+        <p>@joedevivo</p>
+        <p>basho technologies</p>
+    </div>
+
+    <div class="step slide" data-x="-1500" data-y="-1500">
+        <h1>Why JMX?</h1>
+        <ul>
+            <li>Hi!</li>
+        </ul>
+    </div>
+
+    <div id="code1-0" class="step slide code code1" data-x="0" data-y="-1500">
+        <div class="highlight">
+<pre><span class="nf">init</span><span class="p">([])</span> <span class="o">-&gt;</span>
+    <span class="k">case</span> <span class="nn">application</span><span class="p">:</span><span class="nf">get_env</span><span class="p">(</span><span class="n">riak_jmx</span><span class="p">,</span> <span class="n">enabled</span><span class="p">)</span> <span class="k">of</span>
+        <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="n">true</span><span class="p">}</span> <span class="o">-&gt;</span>
+            <span class="c">%% Trap exits so that we get a chance </span>
+            <span class="c">%% to stop the JMX process</span>
+            <span class="nb">process_flag</span><span class="p">(</span><span class="n">trap_exit</span><span class="p">,</span> <span class="n">true</span><span class="p">),</span>
+            <span class="nv">Port</span> <span class="o">=</span> <span class="n">jmx</span><span class="p">(),</span>
+            <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="nl">#state</span><span class="p">{</span> <span class="n">retry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="nv">Port</span> <span class="p">}};</span>
+        <span class="p">_</span> <span class="o">-&gt;</span>
+            <span class="n">ignore</span>
+    <span class="k">end</span><span class="p">.</span>
+</pre>
+    </div>
+    <div class="notes invisible">
+        Some notes yo
+    </div>
+    </div>
+
+    <div id="code1-1" class="step slide invisible code code1" data-x="0" data-y="-1500">
+        <div class="highlight">
+<pre>init([]) -&gt;
+    case application:get_env(riak_jmx, enabled) of
+        {ok, true} ->
+            %% Trap exits so that we get a chance 
+            %% to stop the JMX process
+            process_flag(trap_exit, true),
+            Port = jmx(),
+            <span class="grow"><span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="nl">#state</span><span class="p">{</span> <span class="n">retry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="nv">Port</span> <span class="p">}};</span></span>
+        _ ->
+            ignore
+    end.
+</pre>
+    </div>
+    </div>
+
+    <div id="code1-2" class="step slide invisible code code1 last" data-x="0" data-y="-1500">
+        <div class="highlight">
+<pre>init([]) -&gt;
+    case application:get_env(riak_jmx, enabled) of
+        {ok, true} ->
+            %% Trap exits so that we get a chance 
+            %% to stop the JMX process
+            process_flag(trap_exit, true),
+            Port = jmx(),
+            {ok, #state{ retry = 0, port = Port }};
+        <span class="grow"><span class="p">_</span> <span class="o">-&gt;</span></span>
+            <span class="grow"><span class="n">ignore</span></span>
+    end.
+</pre>
+    </div>
+    </div>
+
+    <div class="step slide" data-x="1500" data-y="-1500">
+        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    </div>
+</div>
+<script src="js/impress.js"></script>
+<script src="js/impressConsole.js"></script>
+<script>
+impress().init();
+impressConsole().init();
+</script>
+</body>
