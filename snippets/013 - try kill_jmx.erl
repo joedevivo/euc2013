@@ -168,7 +168,7 @@ process_key(<<"ReadRepairsTotal">>) -> <<"read_repairs_total">>.
 test_supervision() ->
     JMXPort = 41111,
     Config = [{riak_jmx, [{enabled, true}, {port, JMXPort}]}],
-    [Node|[]] = rt:deploy_nodes(1, Config),
+    [Node] = rt:deploy_nodes(1, Config),
     
     [ kill_jmx() || _X <- lists:seq(0, 9)],
 

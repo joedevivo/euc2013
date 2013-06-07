@@ -95,7 +95,6 @@ confirm() ->
 
     _Value = rt:pbc_read(Pid, <<"testbucket">>, <<"1">>),
 
-    %%Stats5 = get_stats(Node1),
     JMX5 = jmx_dump(JMXDumpCmd),
     verify_inc(JMX3, JMX5, [{<<"read_repairs_total">>, 1},
                             {<<"read_repairs">>, 1}]),

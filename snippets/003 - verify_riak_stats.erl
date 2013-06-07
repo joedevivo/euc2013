@@ -24,8 +24,7 @@
 
 %% You should have curl installed locally to do this.
 confirm() ->
-    Nodes = rt:deploy_nodes(1),
-    [Node1] = Nodes,
+    Nodes = Node1 = rt:deploy_nodes(1),
     ?assertEqual(ok, rt:wait_until_nodes_ready([Node1])),
     Stats1 = get_stats(Node1),
     %% make sure a set of stats have valid values
@@ -50,11 +49,11 @@ confirm() ->
     
     lager:info("perform 5 x  PUT and a GET to increment the stats"),
     lager:info("as the stat system only does calcs for > 5 readings"),
-    
+
     C = rt:httpc(Node1),
     [rt:httpc_write(C, <<"systest">>, <<X>>, <<"12345">>) || X <- lists:seq(1, 5)],
     [rt:httpc_read(C, <<"systest">>, <<X>>) || X <- lists:seq(1, 5)],
-    
+
     Stats2 = get_stats(Node1),
     
     %% make sure the stats that were supposed to increment did
@@ -125,5 +124,4 @@ get_stats(Node) ->
     timer:sleep(10000),
     StatString = os:cmd(io_lib:format("curl -s -S ~s/stats", [rt:http_url(Node)])),
     {struct, Stats} = mochijson2:decode(StatString),
-    %%lager:debug(StatString),
     Stats.

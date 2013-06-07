@@ -1,7 +1,6 @@
 kill_jmx() ->
     {0, JMXProcs} = rt:cmd("ps -ax | grep com.sun.management.jmxremote"),
     Pids = filter_procs(string:tokens(JMXProcs, "\n")),
-    %%Pids = [ hd(string:tokens(Line, "\s")) || Line <- JMXProcLines],
     [ rt:cmd("kill -9 " ++ Pid) || Pid <- Pids].
 
 filter_procs([]) -> [];

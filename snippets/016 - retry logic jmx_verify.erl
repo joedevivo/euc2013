@@ -186,7 +186,7 @@ test_supervision() ->
     rt:load_modules_on_nodes([riak_test_lager_backend], [Node]),
     ok = rpc:call(Node, gen_event, add_handler, [lager_event, riak_test_lager_backend, [info, false]]),
     ok = rpc:call(Node, lager, set_loglevel, [riak_test_lager_backend, info]),
-  
+
     lager:info("Now we're capturing logs on the node, let's start jmx"),
     lager:info("calling riak_jmx:start() to get these retries started"),
     rpc:call(Node, riak_jmx, start, []),

@@ -168,7 +168,7 @@ process_key(<<"ReadRepairsTotal">>) -> <<"read_repairs_total">>.
 test_supervision() ->
     JMXPort = 80,
     Config = [{riak_jmx, [{enabled, true}, {port, JMXPort}]}],
-    [Node|[]] = rt:deploy_nodes(1, Config),
+    [Node] = rt:deploy_nodes(1, Config),
     timer:sleep(20000),
     case net_adm:ping(Node) of
         pang ->
